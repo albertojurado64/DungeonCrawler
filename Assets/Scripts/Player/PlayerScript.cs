@@ -4,6 +4,8 @@ public class PlayerScript : MonoBehaviour
 {
     float moveSpeed = 5f;
     private CharacterController chController;
+
+
     void Start()
     {
         chController = GetComponent<CharacterController>();
@@ -19,6 +21,7 @@ public class PlayerScript : MonoBehaviour
     {
         float Horizontal = Input.GetAxis("Horizontal");
         float Vertical = Input.GetAxis("Vertical");
+       
 
         Vector3 input = new Vector3(Horizontal, 0, Vertical);
         input = Vector3.ClampMagnitude(input, 1);
